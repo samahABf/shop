@@ -4,7 +4,7 @@
 
 
 .Carousel{
-    margin-top:68px;
+    margin-top:64px;
 }
 
 /*hader*/
@@ -163,17 +163,18 @@ background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("2.jpg
 }
 /*about*/
 .about{
-background:  url("12.jpg")fixed  ;
+background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("12.jpg")fixed  ;
 
     height: 500px;
     color: seashell;
     font-size: xx-large;
     width: 100%;
+  font-size: 45px;
 
 }
 
 .about2{
-    font-size: 25px;
+    font-size: 45px;
     font-family:sans-serif;
     font-weight: 500;
     line-height: 23px;
