@@ -1,11 +1,11 @@
-Rails.application.routes.draw do
 
+Rails.application.routes.draw do
   resources :products
   get 'pages/about'
 
   get 'pages/contact'
-get '/products'
-  root 'pages#index'
+
+ root 'products#index'
   get 'pages/index'
  
 
