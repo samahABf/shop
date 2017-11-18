@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'pages/about'
 
   get 'pages/contact'
-
+get '/products'
   root 'pages#index'
   get 'pages/index'
  
