@@ -1,3 +1,214 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.Carousel{
+    margin-top:68px;
+}
+
+/*hader*/
+.header-text {
+    position: absolute;
+    top: 20%;
+    left: 1.8%;
+    right: auto;
+    width: 96.66666666666666%;
+    color: #fff;
+    padding-top: 100px;
+}
+.size{
+    font-size:large;
+    font-weight: bold;
+}
+.header-text h2 {
+    font-size: 40px;
+}
+
+.header-text h2 span {
+    background-color: #2980b9;
+    padding: 10px;
+}
+.header-text h3 span {
+    background-color: #000;
+    padding: 15px;
+}
+.btn-min-block {
+    min-width: 170px;
+    line-height: 26px;
+}
+.btn-theme {
+    color: #15cbf7;
+    background-color: #FFFFFF;
+    border: 2px solid ;
+    margin-right: 15px;
+    border-radius: 8px;
+}
+
+.service{
+    padding-top: 15px;
+}
+.gray{
+    color: darkgrey;
+}
+
+.padding-section{
+    padding-top: 50px;
+}
+.team-section{
+    margin-top:80px;
+}
+.my-media{
+    position: relative;
+    display: inline-block;
+}
+
+.my-media-body::before{
+    content: "";
+    position: absolute;
+    background: rgba(0,0,0,0.5);
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    transition: 0.3s;
+    transform: scale(0);
+}
+.my-media:hover .my-media-body::before{
+    transform: scale(1);
+}
+.social-media{
+    position: absolute;
+    top:0;
+    transition: 0.5s;
+    transform: scaleY(0) rotate(0deg) skewX(0deg);
+    left: 0;
+    right: 0;
+}
+.my-media:hover .social-media{
+    transform: scaleY(1) rotate(360deg) skewX(5deg);
+    top:25%;
+}
+.social-media li{
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    font-size: 20px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    transition: 0.5s;
+}
+.social-media li:hover{
+    background: rgba(0,0,0,0.5);
+}
+.social-media li+li{
+    margin-left: 20px;
+}
+.social-media li i{
+    color: #fff;
+}
+.media-desc{
+    position: absolute;
+    bottom: 25%;
+    color: #fff;
+    background: rgba(255,255,255,0.1);
+    transition: 0.5s;
+    transform: scale(0);
+    left: 0;
+    right: 0;
+    width: 60%;
+    margin: 0 auto;
+}
+.my-media:hover .media-desc{
+    transform: scale(1);
+}
+.media-desc p{
+    margin: 0;
+    padding: 5px 0;
+}
+
+.backimg{
+background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("2.jpg")fixed  ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 350px;
+    color: seashell;
+    font-size: x-large;
+   margin-top: 50px;
+}
+
+.bike {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    -webkit-animation: mymove 5s infinite; /* Safari 4.0 - 8.0 */
+    animation: mymove 5s infinite;
+}
+
+@-webkit-keyframes mymove {
+    from {left: 0px;}
+    to {left: 300px;}
+}
+
+@keyframes mymove {
+    from {left: 0px;}
+    to {left: 100px;}
+}
+.padding-0{
+    padding: 0px;
+}
+.footer{
+    color: seashell;
+    background-color: black;
+}
+/*about*/
+.about{
+background:  url("12.jpg")fixed  ;
+
+    height: 500px;
+    color: seashell;
+    font-size: xx-large;
+    width: 100%;
+
+}
+
+.about2{
+    font-size: 25px;
+    font-family:sans-serif;
+    font-weight: 500;
+    line-height: 23px;
+}
+/*contact*/
+label{
+    display: block;
+    color: #282034;
+
+}
+/* single-line text, checkbox, and button */
+form input,  textarea{
+    display: block;
+    width: 100%;
+    font-size: 20px;
+    background-color: transparent;
+    border: solid 1px #CCC;
+    resize: vertical;
+    color: #282034;
+    border-radius: 9px;
+
+}
+form textarea{
+    min-height: 180px;
+    color :#282034;
+    border-radius: 9px;
+}
+
+form input[type=submit]{
+    background: #f7b07c;
+    margin: 1em 0 0;
+    color: white;
+    border: none;
+    border-radius:8px;
+    transition: all .3s ease-out;
+}
+
+

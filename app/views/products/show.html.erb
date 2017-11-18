@@ -1,0 +1,20 @@
+
+<p id="notice" class="padding space"><%= notice %></p>
+<h1 class="green"> The product<h1>
+<p>
+  <strong class="space red">Name:</strong>
+  <%= @product.name %>
+</p>
+
+<p>
+  <strong class="space red">Description:</strong>
+  <%= @product.description %>
+</p>
+
+<p>
+  <strong class="space red">Image url:</strong>
+  <%= @product.image_url %>
+</p>
+
+<%= link_to 'Edit', edit_product_path(@product) %> |
+<%= link_to 'Back', products_path %>

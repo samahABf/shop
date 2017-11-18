@@ -13,12 +13,25 @@
  *= require_tree .
  *= require_self
  */
+body{
+margin:0px;
+}
 footer{
 background-color:black;
 color:white;
-position: fixed;
-    bottom: 0;
 text-align:center;
 width:100%;
+
 }
 
+
+.logo{
+    margin-bottom: 20px;
+}
+.navbar-nav {
+    margin-top: 16px;
+}
+.search{
+    margin-top: 12px;
+float:left;
+}
