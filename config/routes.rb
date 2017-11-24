@@ -1,15 +1,12 @@
 Rails.application.routes.draw do
-  resources :orders
-  resources :products
   resources :products 
+  resources :orders, only: [:index, :show, :create, :destroy]
 
   get 'pages/about'
-
   get 'pages/contact'
-
-  root 'pages#index'
   get 'pages/index'
- 
-resources :orders, only: [:index, :show, :create, :destroy]
+    get 'pages/landing_page'
+  root 'pages#landing_page'
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
