@@ -29,9 +29,10 @@ width:100%;
     margin-bottom: 20px;
 }
 .navbar-nav {
-    margin-top: 16px;
+    margin-top: 10px;
 }
 .search{
-    margin-top: 12px;
-float:left;
+  width: 50%;
+ margin-left:40px;
+  height:25px;
 }
