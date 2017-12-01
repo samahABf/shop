@@ -1,21 +1,30 @@
-<h1 class="thanks contact">Contact Us</h1>
+<div class="contact">
+  <div class="container-fluid header">
+    <h1>Contact Us</h1>
+    <%= flash[:notice] %>
 
-<%= flash[:notice] %>
+      <%= form_tag("/pages/thank_you") do %>
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="form-group">
+            <%= label_tag :name %>
+            <%= text_field_tag :name, nil, class: "form-control", placeholder: "Enter Name", required: "true"%>
+          </div><!--name-->
+          <div class="form-group">
+            <%= label_tag :email, "Email Address" %>
+            <%= text_field_tag :email, nil, class: "form-control", placeholder: "Enter Email", required: "true", type: "email" %>
+          </div><!--email-->
+          <div class="form-group">
+            <%= label_tag :message %>
+            <%= text_area_tag :message, nil, class: "form-control", placeholder: "Enter Message", required: "true" %>
 
-<%= form_with(url:"/pages/thank_you", method: "post", local: true) do |form| %>
-<div class="row">
-  <div class="form-group ">
-    <%= form.label :name %>
-    <%= form.text_field :name, class: "form-control", placeholder: "Enter Name" %>
-  </div>
-  <div class="form-group">
-    <%= form.label :email %>
-    <%= form.text_field :email, class: "form-control", placeholder: "Enter Email" %>
-  </div>
-  <div class="form-group">
-    <%= form.label :message %>
-    <%= form.text_area :message, class: "form-control", placeholder: "Enter Message", rows: 5 %>
-  </div>
+            <button class="btn btn-danger" style="border: none; margin-top: 1em; padding: 0">
+            <%= submit_tag "Send", class: 'btn btn-danger', style: 'border: none' %>
+            </button>
+          <% end %>
+        </div><!--message-->
+      </div><!--div-->
+    </div><!--row-->
+  </div><!--container header-->
+
 </div>
-<%= form.submit "Send", class: "form_label" %>
-<% end %>
