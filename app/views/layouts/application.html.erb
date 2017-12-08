@@ -62,6 +62,14 @@
   <% if notice %>
     <p id="notice" class="alert alert-info"><%= notice %></p>
 <% end %>
+
+    <% if notice %>
+      <div id="notice" class="alert alert-success"><%= notice %></div>
+    <% end %>
+    <% if alert %>
+      <div id="alert" class="alert alert-danger"><%= alert %></div>
+    <% end %>
+
   <%= yield %>
 
     <footer  style="margin-top: 50px">
