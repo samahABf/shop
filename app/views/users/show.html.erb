@@ -1,5 +1,10 @@
-<p id="notice"><%= notice %></p>
 
+    <% if notice %>
+      <div id="notice" class="alert alert-success"><%= notice %></div>
+    <% end %>
+    <% if alert %>
+      <div id="alert" class="alert alert-danger"><%= alert %></div>
+    <% end %>
 <p>
   <strong>First name:</strong>
   <%= @user.first_name %>
