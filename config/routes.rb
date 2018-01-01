@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :users, only: [:new, :create, :edit, :update, :destroy]
   resources :products do
   resources :comments
+  devise_for :users, controllers: { registrations: "user_registrations" }
 end
 resources :users
   post '/pages/thank_you'
