@@ -1,26 +1,25 @@
 class OrdersController < ApplicationController
-  before_action :authenticate_user!
+def create
 
-  def index
-    @orders = Order.where(user_id: current_user)
-  end
 
-  def show
-  end
+    product = Product.find(params[:product_id])
 
-  def new
-    @order = Order.new
-  end
+    basket.add(product.id)
 
-  def create
-  end
+    flash[:success] = "Product added to basket"
 
-  def destroy
-  end
+    redirect_to product_path(product)
 
-  private
-    def order_params
-      params.require(:order).permit( :total, :user_id, :product_ids => [])
-    end  
+end
 
+
+def new
+
+@order = Order.new
+
+    basket.each do |item_id|
+        @order.order_products.build(product: Product.find(item_id))
+    end
+
+end
 end

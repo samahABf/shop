@@ -2,7 +2,6 @@ class Product < ApplicationRecord
 		
   validates :name, presence: true
   validates :description, presence: true
-validates :price, numericality: true
 validates :colour, presence: true
 validates :image_url, presence: true
   has_many :comments
